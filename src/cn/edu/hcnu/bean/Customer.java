@@ -1,17 +1,18 @@
-import java.util.Date;
+package cn.edu.hcnu.bean;
+
 
 public class Customer {
     private int id;
     private String name;
     private String phone;
     private String cardid;//身份证号
-    private Date birthDAte;//出生日期
+    private String birthDAte;//出生日期
 
     public Customer(){
         super();
     }
 
-    public Customer(int id, String name, String phone, String cardid, Date birthDAte) {
+    public Customer(int id, String name, String phone, String cardid,String  birthDAte) {
         this.id = id;
         this.name = name;
         this.phone = phone;
@@ -51,11 +52,11 @@ public class Customer {
         this.cardid = cardid;
     }
 
-    public Date getBirthDAte() {
+    public String getBirthDAte() {
         return birthDAte;
     }
 
-    public void setBirthDAte(Date birthDAte) {
+    public void setBirthDAte(String birthDAte) {
         this.birthDAte = birthDAte;
     }
 }

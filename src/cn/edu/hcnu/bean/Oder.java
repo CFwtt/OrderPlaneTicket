@@ -1,3 +1,9 @@
+package cn.edu.hcnu.bean;
+
+import cn.edu.hcnu.bll.impl.FlightServiceImpl;
+
+import java.util.Set;
+
 public class Oder
 {
     private String id;
@@ -8,7 +14,10 @@ public class Oder
     private float jptgx;//机票退改险
     private  float yhq;//优惠券
     private  float hszj;//含税总价
-    private Customer customer[];
+    private  Customer customer[];
+    private Set<Customer> customerSet;
+    private Flight flight;
+
 
     public String getId() {
         return id;
