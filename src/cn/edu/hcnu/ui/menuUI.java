@@ -1,12 +1,14 @@
 package cn.edu.hcnu.ui;
-
 import cn.edu.hcnu.bean.Flight;
 import cn.edu.hcnu.bll.FlightService;
 import cn.edu.hcnu.bll.impl.FlightServiceImpl;
 
 import java.sql.SQLException;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class menuUI {
     public static void main(String[] args){
@@ -40,16 +42,43 @@ public class menuUI {
                     String departureTime=scanner.next();
                     Flight flight=new Flight(id,flightID,planeType,currentseatsNum,
                             departureAirPort,destinationAirport,departureTime);
+                    System.out.println(flight);
                     try {
                         flightService.insertFlight(flight);
+                        System.out.println("添加结束");
                     } catch (SQLException e) {
-                        String errorMessage = e.getMessage();
-                        System.out.println("请好好检查！");
+                       String errorMessage = e.getMessage();
+
+                        if(errorMessage.startsWith("ORA-12899")){
+                            //ORA-12899: value too large for column "OPTS"."FLIGHT"."ID" (actual: 32, maximum: 30)
+                            //String pattern = "(\\w+-\\d{5}):(\\s\\w+)+\\s(\"\\w+\")\\.(\"\\w+\")\\.(\"\\w+\")";
+                            //ORA-12899: 列 "OPTS"."FLIGHT"."ID" 的值太大 (实际值: 32, 最大值: 30)
+
+                            String pattern = "(\\w+-\\d{5}):(\\s[\\u4E00-\\u9FFF])+\\s\"(\\w+)\"\\.(\"\\w+\")\\.(\"\\w+\")";
+                            // 创建 Pattern 对象
+                            Pattern r = Pattern.compile(pattern);
+                            // 现在创建 matcher 对象
+                            Matcher m = r.matcher(errorMessage);
+//                            System.out.println(errorMessage);
+                            System.out.println(m);
+                            if(m.find()){
+                                String ErrorCode = m.group(0);
+                               String tableName = m.group(4);
+                               String columnName = m.group(5);
+
+                                System.out.println("错误代码："+ErrorCode+"\n"+
+                                                   "错误原因：此"+tableName+"表中的"+columnName+"字段范围不对劲");
+                            }else{
+                                System.out.println("NO MATCH!");
+                            }
+                        }
                     }
                     break;
                 case 2:
+
                     try {
-                        flightService.getAllFlights();
+                        Set<Flight> flights = flightService.getAllFlights();
+                        System.out.println(flights);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

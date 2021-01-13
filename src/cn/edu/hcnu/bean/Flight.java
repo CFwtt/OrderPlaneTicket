@@ -77,7 +77,7 @@ public class Flight {
 
     @Override
     public String toString() {
-        return "航班号：'" + id + '\'' +
+        return "航班号：'" +FlightId+ '\'' +
                 ", 飞机类型：'" + planeType + '\'' +
                 ", 座位数：" + currentseatsNum +
                 ", 起飞机场：'" + departureAirPort + '\'' +

@@ -6,6 +6,7 @@ import cn.edu.hcnu.dao.impl.IFightDaoImpl;
 import cn.edu.hcnu.dao.impl.IFlightDao;
 
 import java.sql.SQLException;
+import java.util.Set;
 
 public class FlightServiceImpl implements FlightService {
 
@@ -21,8 +22,8 @@ public class FlightServiceImpl implements FlightService {
     }
 
     @Override
-    public void getAllFlights() throws SQLException {
-        iFlightDao.getAllFlights();
+    public Set<Flight> getAllFlights() throws SQLException {
+        return iFlightDao.getAllFlights();
     }
 
     @Override
