@@ -2,14 +2,16 @@ package cn.edu.hcnu.bean;
 
 public class Flight {
     private String id;
+    private String FlightId;
     private String planeType;
     private int currentseatsNum;
     private String departureAirPort;//出发机场
     private String destinationAirPort;//目的机场
     private String departureTime;//出发时间
 
-    public Flight(String id, String planeType, int currentseatsNum, String departureAirPort, String destinationAirPort, String departureTime) {
+    public Flight(String id, String flightId, String planeType, int currentseatsNum, String departureAirPort, String destinationAirPort, String departureTime) {
         this.id = id;
+        FlightId = flightId;
         this.planeType = planeType;
         this.currentseatsNum = currentseatsNum;
         this.departureAirPort = departureAirPort;
@@ -55,6 +57,22 @@ public class Flight {
 
     public void setDepartureTime(String departureTime) {
         this.departureTime = departureTime;
+    }
+
+    public int getCurrentseatsNum() {
+        return currentseatsNum;
+    }
+
+    public void setCurrentseatsNum(int currentseatsNum) {
+        this.currentseatsNum = currentseatsNum;
+    }
+
+    public String getFlightId() {
+        return FlightId;
+    }
+
+    public void setFlightId(String flightId) {
+        FlightId = flightId;
     }
 
     @Override
