@@ -10,8 +10,8 @@ public interface IFlightDao {
 
     void insertFlight(Flight flight) throws SQLException;
     Set<Flight> getAllFlights() throws SQLException;
-    Flight getFlightByDepartureTime(String departureTime);
-    Flight getFlightByDepartureAirPort(String departureAirPort);
-    Flight getFlightByDestinationAirPort(String destinationAirPort);
+    Flight getFlightByDepartureTime(String departureTime) throws SQLException;
+    Flight getFlightByDepartureAirPort(String departureAirPort) throws SQLException;
+    Flight getFlightByDestinationAirPort(String destinationAirPort) throws SQLException;
     void  updateFlight(Flight flight);
 }

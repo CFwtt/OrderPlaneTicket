@@ -2,6 +2,7 @@ package cn.edu.hcnu.ui;
 import cn.edu.hcnu.bean.Flight;
 import cn.edu.hcnu.bll.FlightService;
 import cn.edu.hcnu.bll.impl.FlightServiceImpl;
+import com.sun.scenario.effect.impl.sw.java.JSWBlend_SRC_OUTPeer;
 
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -22,7 +23,7 @@ public class menuUI {
             System.out.println("按2，显示所有航班信息");
             System.out.println("按3，查询航班信息");
             System.out.println("按4，机票预定");
-            System.out.println("按5，机票退顶");
+            System.out.println("按5，机票退订");
             System.out.println("按6，退出系统");
             int  choice  = scanner.nextInt();
             switch (choice){
@@ -62,7 +63,7 @@ public class menuUI {
 //                            System.out.println(errorMessage);
                             System.out.println(m);
                             if(m.find()){
-                                String ErrorCode = m.group(0);
+                                String ErrorCode = m.group(1);
                                String tableName = m.group(4);
                                String columnName = m.group(5);
 
@@ -75,7 +76,6 @@ public class menuUI {
                     }
                     break;
                 case 2:
-
                     try {
                         Set<Flight> flights = flightService.getAllFlights();
                         System.out.println(flights);
@@ -86,6 +86,61 @@ public class menuUI {
                 default:
                     System.out.println("您输入的不是1~6之间的数字，请重新输入"+"\n");
                     break;
+                case 3:
+                    System.out.println("输入相应的编号选择您要查询航班的方式：");
+                    System.out.println("1，按起飞时间查询");
+                    System.out.println("2，按空座信息查询");
+                    System.out.println("3，按起飞地查询");
+                    System.out.println("4，按目的地查询");
+                    int choices = scanner.nextInt();
+                        if (choices==1){
+                            System.out.print("请输入起飞飞行时间:");
+                            String detime = scanner.next();
+                            try {
+                                Flight flight1 = flightService.getFlightByDepartureTime(detime);
+                                if (flight1!=null){
+                                    System.out.println("航班信息："+flight1);
+
+                                }else {
+                                    System.out.println("您所查询的航班不存在，请重新输入！");
+                                }
+
+                            } catch (SQLException e) {
+                                e.printStackTrace();
+                            }
+                        }else if (choices==2){
+                            //按空座位查询
+                        }else if (choices==3){
+                            System.out.print("请输入起飞机场:");
+                            String DepartureAirPort = scanner.next();
+                            try {
+                                Flight flight1 = flightService.getFlightByDepartureAirPort(DepartureAirPort);
+                                if (flight1!=null){
+                                    System.out.println("航班信息："+flight1);
+
+                                }else {
+                                    System.out.println("您所查询的航班不存在，请重新输入！");
+                                }
+
+                            } catch (SQLException e) {
+                                e.printStackTrace();
+                            }
+                        }else if (choices==4){
+                            System.out.print("请输入目的机场:");
+                            String destinationAirPort = scanner.next();
+                            try {
+                                Flight flight1 = flightService.getFlightByDestinationAirPort(destinationAirPort);
+                                if (flight1!=null){
+                                    System.out.println("航班信息："+flight1);
+
+                                }else {
+                                    System.out.println("您所查询的航班不存在，请重新输入！");
+                                }
+
+                            } catch (SQLException e) {
+                                e.printStackTrace();
+                            }
+                        }
             }
         }
 
