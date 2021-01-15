@@ -15,7 +15,7 @@ public class menuUI {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         FlightService flightService = new FlightServiceImpl();
-
+        System.out.println("2021.1.15");
         while (true){
             System.out.println("请输入相对应的数字进行操作");
 
@@ -54,7 +54,6 @@ public class menuUI {
                             //ORA-12899: value too large for column "OPTS"."FLIGHT"."ID" (actual: 32, maximum: 30)
                             //String pattern = "(\\w+-\\d{5}):(\\s\\w+)+\\s(\"\\w+\")\\.(\"\\w+\")\\.(\"\\w+\")";
                             //ORA-12899: 列 "OPTS"."FLIGHT"."ID" 的值太大 (实际值: 32, 最大值: 30)
-
                             String pattern = "(\\w+-\\d{5}):(\\s[\\u4E00-\\u9FFF])+\\s\"(\\w+)\"\\.(\"\\w+\")\\.(\"\\w+\")";
                             // 创建 Pattern 对象
                             Pattern r = Pattern.compile(pattern);

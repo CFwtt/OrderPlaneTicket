@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b6598f7-1751-4549-86f0-fc5a95717ff2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/jar/ojdbc6.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/ojdbc6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/ojdbc6.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OrderPlaneTicket/META-INF/OrderPlaneTicket.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OrderPlaneTicket/cn/edu/hcnu/bean/Flight.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OrderPlaneTicket/cn/edu/hcnu/bean/Flight.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OrderPlaneTicket/cn/edu/hcnu/bll/FlightService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OrderPlaneTicket/cn/edu/hcnu/bll/FlightService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OrderPlaneTicket/cn/edu/hcnu/bll/impl/FlightServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OrderPlaneTicket/cn/edu/hcnu/bll/impl/FlightServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OrderPlaneTicket/cn/edu/hcnu/dao/impl/IFightDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OrderPlaneTicket/cn/edu/hcnu/dao/impl/IFightDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OrderPlaneTicket/cn/edu/hcnu/dao/impl/IFlightDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OrderPlaneTicket/cn/edu/hcnu/dao/impl/IFlightDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OrderPlaneTicket/cn/edu/hcnu/ui/menuUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OrderPlaneTicket/cn/edu/hcnu/ui/menuUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/hcnu/bean/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/hcnu/bean/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/hcnu/bll/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/hcnu/bll/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/hcnu/bll/impl/FlightServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/hcnu/bll/impl/FlightServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/hcnu/dao/impl/IFightDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/hcnu/dao/impl/IFightDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/hcnu/dao/impl/IFlightDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/hcnu/dao/impl/IFlightDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cn/edu/hcnu/ui/menuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cn/edu/hcnu/ui/menuUI.java" afterDir="false" />
-    </list>
+    <list default="true" id="4b6598f7-1751-4549-86f0-fc5a95717ff2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
