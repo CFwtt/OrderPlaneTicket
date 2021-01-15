@@ -59,17 +59,81 @@ public class IFightDaoImpl implements IFlightDao {
     }
 
     @Override
-    public Flight getFlightByDepartureTime(String departureTime) {
+    public Flight getFlightByDepartureTime(String departureTime) throws SQLException {
+        String url="jdbc:oracle:thin:@localhost:1521:orcl" ;
+        String username="opts";
+        String password="opts1234";
+        Connection conn= DriverManager.getConnection(url,username,password);
+        String sql = "SELECT FLIGHT_ID,PLANE_TYPE,TOTAL_SEATS_NUM," +
+                "DEPARTURE_AIRPORT,DESTINATION_AIRPORT,DEPARTURE_TIME FROM flight WHERE DEPARTURE_TIME = ?";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1,departureTime);
+        ResultSet res = pstmt.executeQuery();
+        while (res.next()){
+            String  flightID= res.getString("flight_id");
+            String planeType= res.getString("plane_type");
+            int currentseatsNum= res.getInt("total_seats_num");
+            String departureAirPort = res.getString("departure_airport");
+            String destinationAirport = res.getString("destination_airport");
+            String departureTimes = res.getString("departure_time");
+
+            Flight flight=new Flight(flightID,planeType,currentseatsNum,
+                    departureAirPort,destinationAirport,departureTime);
+            return flight;
+        }
+        return null;
+    }
+
+
+    @Override
+    public Flight getFlightByDepartureAirPort(String departureAirPort) throws SQLException {
+        String url="jdbc:oracle:thin:@localhost:1521:orcl" ;
+        String username="opts";
+        String password="opts1234";
+        Connection conn= DriverManager.getConnection(url,username,password);
+        String sql = "SELECT FLIGHT_ID,PLANE_TYPE,TOTAL_SEATS_NUM," +
+                "DEPARTURE_AIRPORT,DESTINATION_AIRPORT,DEPARTURE_TIME FROM flight WHERE DEPARTURE_AIRPORT = ?";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1,departureAirPort);
+        ResultSet res = pstmt.executeQuery();
+        while (res.next()){
+            String  flightID= res.getString("flight_id");
+            String planeType= res.getString("plane_type");
+            int currentseatsNum= res.getInt("total_seats_num");
+            String departureAirPorts = res.getString("departure_airport");
+            String destinationAirport = res.getString("destination_airport");
+            String departureTime = res.getString("departure_time");
+
+            Flight flight=new Flight(flightID,planeType,currentseatsNum,
+                    departureAirPorts,destinationAirport,departureTime);
+            return flight;
+        }
         return null;
     }
 
     @Override
-    public Flight getFlightByDepartureAirPort(String departureAirPort) {
-        return null;
-    }
+    public Flight getFlightByDestinationAirPort(String destinationAirPort) throws SQLException {
+        String url="jdbc:oracle:thin:@localhost:1521:orcl" ;
+        String username="opts";
+        String password="opts1234";
+        Connection conn= DriverManager.getConnection(url,username,password);
+        String sql = "SELECT FLIGHT_ID,PLANE_TYPE,TOTAL_SEATS_NUM," +
+                "DEPARTURE_AIRPORT,DESTINATION_AIRPORT,DEPARTURE_TIME FROM flight WHERE DESTINATION_AIRPORT = ?";
+        PreparedStatement pstmt = conn.prepareStatement(sql);
+        pstmt.setString(1,destinationAirPort);
+        ResultSet res = pstmt.executeQuery();
+        while (res.next()){
+            String  flightID= res.getString("flight_id");
+            String planeType= res.getString("plane_type");
+            int currentseatsNum= res.getInt("total_seats_num");
+            String departureAirPort = res.getString("departure_airport");
+            String destinationAirport = res.getString("destination_airport");
+            String departureTime = res.getString("departure_time");
 
-    @Override
-    public Flight getFlightByDestinationAirPort(String destinationAirPort) {
+            Flight flight=new Flight(flightID,planeType,currentseatsNum,
+                    departureAirPort,destinationAirport,departureTime);
+            return flight;
+        }
         return null;
     }
 
