@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4b6598f7-1751-4549-86f0-fc5a95717ff2" name="Default Changelist" comment="" />
+    <list default="true" id="4b6598f7-1751-4549-86f0-fc5a95717ff2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/jarAndsql/crebas.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jar/ojdbc6.jar" beforeDir="false" afterPath="$PROJECT_DIR$/src/jarAndsql/ojdbc6.jar" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="2021.1.15" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,7 +47,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/jar/ojdbc6.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/jarAndsql" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -87,9 +91,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.menuUI" />
+        <item itemvalue="Application.DEmo" />
         <item itemvalue="Application.menuUI" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.DEmo" />
       </list>
     </recent_temporary>
   </component>
@@ -141,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610531710102</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="飞机项目">
+      <created>1610679410703</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610679410703</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,10 +169,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="605" y="113" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1610589112183" />
-    <state x="399" y="21" key="CommitChangelistDialog2" timestamp="1610531707618">
+    <state x="399" y="21" key="CommitChangelistDialog2" timestamp="1610680010214">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="399" y="21" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1610531707618" />
+    <state x="399" y="21" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1610680010214" />
     <state x="495" y="174" key="FileChooserDialogImpl" timestamp="1610589893528">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -208,10 +221,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="8" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1610589898789" />
-    <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1610538822510">
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1610679645186">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1610538822510" />
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1610679645186" />
     <state x="480" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1610588394994">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -220,6 +233,14 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="793" y="0" width="814" height="867" key="dock-window-1/0.0.1600.860@0.0.1600.860" timestamp="1610525052960" />
+    <state x="562" y="141" key="git4idea.branch.GitSmartOperationDialog" timestamp="1610679612092">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="562" y="141" key="git4idea.branch.GitSmartOperationDialog/0.0.1600.860@0.0.1600.860" timestamp="1610679612092" />
+    <state x="584" y="220" key="git4idea.merge.GitMergeDialog" timestamp="1610679481357">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="584" y="220" key="git4idea.merge.GitMergeDialog/0.0.1600.860@0.0.1600.860" timestamp="1610679481357" />
     <state x="349" y="134" key="new project wizard" timestamp="1610538858171">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
